@@ -17,6 +17,16 @@ abstract class Prey extends AbstractBirds {
         return added_c;
     }
 
+    @Override
+    public String getNameOfWaterBody() {
+        throw new IllegalStateException(getBirdType() + " are not water bird.");
+    }
+
+    @Override
+    public String getFavoriteSaying() {
+        throw new IllegalStateException(getBirdType() + " are not parrots.");
+    }
+
 
 
 

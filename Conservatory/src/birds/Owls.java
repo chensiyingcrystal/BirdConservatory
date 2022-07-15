@@ -5,7 +5,7 @@ public final class Owls extends AbstractBirds {
 
     public Owls(String birdID) {
         this.id = birdID;
-        this.type = "Owls";
+        this.type = BirdType.Owls;
         this.characteristic = new String[] {"round, forward-looking eyes"};
         this.isExtinct = false;
         this.numberOfWings = 2;
@@ -15,5 +15,15 @@ public final class Owls extends AbstractBirds {
     @Override
     public String[] getCharacteristic() {
         return this.characteristic;
+    }
+
+    @Override
+    public String getNameOfWaterBody() {
+        throw new IllegalStateException(getBirdType() + " are not water bird.");
+    }
+
+    @Override
+    public String getFavoriteSaying() {
+        throw new IllegalStateException(getBirdType() + " are not parrots.");
     }
 }
